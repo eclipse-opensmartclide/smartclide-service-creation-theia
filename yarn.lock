@@ -1518,24 +1518,25 @@
     vscode-languageserver-textdocument "^1.0.1"
 
 "@theia/git@latest":
-  version "1.23.0"
-  resolved "https://registry.yarnpkg.com/@theia/git/-/git-1.23.0.tgz#02c00a3591309cac125434ad5327c810509da199"
-  integrity sha512-U/HbAIJjsL/RWUln8M7zkdOLhlNRTQn3TMJJODKhESUJsuISdmleyh5slhb+3BJa+FpYd1zSro9iso0j4rp2vw==
+  version "1.29.2"
+  resolved "https://registry.yarnpkg.com/@theia/git/-/git-1.29.2.tgz#3d13b2bcad3dc74bebebcc5ba1ea23b82b15db52"
+  integrity sha512-K7bhHCZSErJ1usXHtZqCS1b98beK90t95rkfPDmb2aXVY7f2q/UkR4XCAEtUrFLKwR4Wp3TgDjSU49kN+OPJPg==
   dependencies:
-    "@theia/core" "1.23.0"
-    "@theia/editor" "1.23.0"
-    "@theia/filesystem" "1.23.0"
-    "@theia/navigator" "1.23.0"
-    "@theia/scm" "1.23.0"
-    "@theia/scm-extra" "1.23.0"
-    "@theia/workspace" "1.23.0"
+    "@theia/core" "1.29.2"
+    "@theia/editor" "1.29.2"
+    "@theia/filesystem" "1.29.2"
+    "@theia/monaco-editor-core" "1.67.2"
+    "@theia/navigator" "1.29.2"
+    "@theia/scm" "1.29.2"
+    "@theia/scm-extra" "1.29.2"
+    "@theia/workspace" "1.29.2"
     "@types/diff" "^3.2.2"
     "@types/p-queue" "^2.3.1"
     diff "^3.4.0"
-    dugite-extra "0.1.15"
+    dugite-extra "0.1.16"
     find-git-exec "^0.0.4"
     find-git-repositories "^0.1.1"
-    moment "2.24.0"
+    luxon "^2.4.0"
     octicons "^7.1.0"
     p-queue "^2.4.2"
     ts-md5 "^1.2.2"
@@ -1636,6 +1637,16 @@
     "@theia/workspace" "1.23.0"
     minimatch "^3.0.4"
 
+"@theia/navigator@1.29.2":
+  version "1.29.2"
+  resolved "https://registry.yarnpkg.com/@theia/navigator/-/navigator-1.29.2.tgz#44110d344937ed83941ad8f2c60a5feff9ae6dc1"
+  integrity sha512-s549DACbeIMYmPCVwGs/XzSqMSuEwea9GxmYDh521kxJ2Xh2jQ7+v23k+NL+DnN7jzVEfjtmhddZ9AG7k2T7ow==
+  dependencies:
+    "@theia/core" "1.29.2"
+    "@theia/filesystem" "1.29.2"
+    "@theia/workspace" "1.29.2"
+    minimatch "^3.0.4"
+
 "@theia/outline-view@1.23.0":
   version "1.23.0"
   resolved "https://registry.yarnpkg.com/@theia/outline-view/-/outline-view-1.23.0.tgz#d39991d203c0edb914b11ed6a024920495b6a2bc"
@@ -1692,26 +1703,25 @@
     http-proxy-agent "^5.0.0"
     https-proxy-agent "^5.0.0"
 
-"@theia/scm-extra@1.23.0":
-  version "1.23.0"
-  resolved "https://registry.yarnpkg.com/@theia/scm-extra/-/scm-extra-1.23.0.tgz#61d9a2e6c1d83723db2fcf1b7f60e619307c8261"
-  integrity sha512-U7vBlpC9BI46Ib5RcLjnGHKV51ScYrCL9zGiNK0axSE+3dPBZk6he3HWd+ZVeBRHnS3nbV1TWV59dySQOfku1Q==
+"@theia/scm-extra@1.29.2":
+  version "1.29.2"
+  resolved "https://registry.yarnpkg.com/@theia/scm-extra/-/scm-extra-1.29.2.tgz#312d286ff2fe585462bae24c20edc07f263f583a"
+  integrity sha512-wor81TvYV166Mzf2JGSZ6j+YyzV5ErqZEUyLWt3uFeEi1z2zin/5AbyddbDIWxCkZ6hocQd0SbtQJYBALYyK7w==
   dependencies:
-    "@theia/core" "1.23.0"
-    "@theia/editor" "1.23.0"
-    "@theia/filesystem" "1.23.0"
-    "@theia/navigator" "1.23.0"
-    "@theia/scm" "1.23.0"
+    "@theia/core" "1.29.2"
+    "@theia/editor" "1.29.2"
+    "@theia/filesystem" "1.29.2"
+    "@theia/navigator" "1.29.2"
+    "@theia/scm" "1.29.2"
 
-"@theia/scm@1.23.0":
-  version "1.23.0"
-  resolved "https://registry.yarnpkg.com/@theia/scm/-/scm-1.23.0.tgz#a651d09b135cd81aa80f26d46efa893ddebe977c"
-  integrity sha512-xgBE7OZz8u4KVHfVcp0iAUO6Wt+TrMJYZFjD5ov6mtqEj0rmtuRB5v++r1U5AHjWUZhQuW6CDQLZoNyPjTEnwQ==
+"@theia/scm@1.29.2":
+  version "1.29.2"
+  resolved "https://registry.yarnpkg.com/@theia/scm/-/scm-1.29.2.tgz#99cb5621169be3514b22ce29d93350265dc5dbff"
+  integrity sha512-Ag8sJViIrm67RHR6Y5vfcx+keRUIX9BK4OdZrQnWd0UBcg006v7ffQQ0xzUU/WUuO1dZdYegn7+B0cn/Pl2Alw==
   dependencies:
-    "@theia/core" "1.23.0"
-    "@theia/editor" "1.23.0"
-    "@theia/filesystem" "1.23.0"
-    "@theia/navigator" "1.23.0"
+    "@theia/core" "1.29.2"
+    "@theia/editor" "1.29.2"
+    "@theia/filesystem" "1.29.2"
     "@types/diff" "^3.2.2"
     diff "^3.4.0"
     p-debounce "^2.1.0"
@@ -4053,10 +4063,10 @@ drivelist@^9.0.2:
     nan "^2.14.0"
     prebuild-install "^5.2.4"
 
-dugite-extra@0.1.15:
-  version "0.1.15"
-  resolved "https://registry.yarnpkg.com/dugite-extra/-/dugite-extra-0.1.15.tgz#322406b628ea5515c5c6fcd65e4d040543d6268a"
-  integrity sha512-beLmQcIXLA8aXqWQZF/ooECoZvYKpBywIFwgqAoYnV04NdWUXDtZ6mMcjQf5eAz5PjXGXAYSuQ31zkPL8J85+A==
+dugite-extra@0.1.16:
+  version "0.1.16"
+  resolved "https://registry.yarnpkg.com/dugite-extra/-/dugite-extra-0.1.16.tgz#cc1f48e1090c8e8507ff7fe342e9af8b7bb4e9ed"
+  integrity sha512-Fcl+o0hZy7dwuI4vIxNLYpEsYeYRSEAQDshyiikX3WMJMOj0JZQ6Qt0H3PtlOdJYGUZocGGZ8VFRtbJeCT24lw==
   dependencies:
     byline "^5.0.0"
     dugite-no-gpl "1.69.0"
@@ -6203,6 +6213,11 @@ lru-cache@^6.0.0:
   dependencies:
     yallist "^4.0.0"
 
+luxon@^2.4.0:
+  version "2.5.0"
+  resolved "https://registry.yarnpkg.com/luxon/-/luxon-2.5.0.tgz#098090f67d690b247e83c090267a60b1aa8ea96c"
+  integrity sha512-IDkEPB80Rb6gCAU+FEib0t4FeJ4uVOuX1CQ9GsvU3O+JAGIgu0J7sf1OarXKaKDygTZIoJyU6YdZzTFRu+YR0A==
+
 lzma-native@^8.0.5:
   version "8.0.6"
   resolved "https://registry.yarnpkg.com/lzma-native/-/lzma-native-8.0.6.tgz#3ea456209d643bafd9b5d911781bdf0b396b2665"
@@ -6564,11 +6579,6 @@ modify-values@^1.0.0:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/modify-values/-/modify-values-1.0.1.tgz#b3939fa605546474e3e3e3c63d64bd43b4ee6022"
   integrity sha512-xV2bxeN6F7oYjZWTe/YPAy6MN2M+sL4u/Rlm2AHCIVGfo2p1yGmBHQ6vHehl4bRTZBdHu3TSkWdYgkwpYzAGSw==
-
-moment@2.24.0:
-  version "2.24.0"
-  resolved "https://registry.yarnpkg.com/moment/-/moment-2.24.0.tgz#0d055d53f5052aa653c9f6eb68bb5d12bf5c2b5b"
-  integrity sha512-bV7f+6l2QigeBBZSM/6yTNq4P2fNpSWj/0e7jQcy87A8e7o2nAfP/34/2ky5Vw4B9S446EtIhodAzkFCcR4dQg==
 
 moment@^2.6.0:
   version "2.29.1"
