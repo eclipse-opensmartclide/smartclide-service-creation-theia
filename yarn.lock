@@ -1456,9 +1456,9 @@
     "@theia/variable-resolver" "1.29.2"
 
 "@theia/electron@latest":
-  version "1.23.0"
-  resolved "https://registry.yarnpkg.com/@theia/electron/-/electron-1.23.0.tgz#58e9bef08c723fb05dea910ad53218ce2d156eb0"
-  integrity sha512-hM1WswK5PXTSglYkkr39T9jwt0e1soitWVtacGw7qvrMydu7RaEPh2LVzUmVk6E++p2EqYfKxd4icxzf4a4DvQ==
+  version "1.32.0"
+  resolved "https://registry.yarnpkg.com/@theia/electron/-/electron-1.32.0.tgz#506372d47a5b2f0192e5f1c7ba3a589e18c1b600"
+  integrity sha512-bjgtK7cf4SY+slMivPyZvasCHkuT2IFAAaYVDzDb1I1+DJSSALAbET5c2Xcd4k4OzbAlBqGy/Y7uUBAyqFiOFw==
   dependencies:
     "@electron/remote" "^2.0.1 <2.0.4 || >2.0.4"
     electron-store "^8.0.0"
