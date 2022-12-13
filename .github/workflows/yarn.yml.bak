@@ -25,5 +25,5 @@ jobs:
       - name: Run install
         uses: borales/actions-yarn@v4
         with:
-          cmd: --cwd smartclide-service-creation-theia install
+          cmd: --cwd ui install # will run `yarn install` command
       
