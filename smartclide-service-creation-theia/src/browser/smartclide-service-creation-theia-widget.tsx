@@ -116,7 +116,7 @@ export class SmartclideServiceCreationTheiaWidget extends ReactWidget {
 			(document.getElementById("waitAnimation") as HTMLElement).style.display = "block";
 
 			//post request
-			fetch(SmartclideServiceCreationTheiaWidget.state.stateBackEndHost+'/generateTests', {
+			fetch(SmartclideServiceCreationTheiaWidget.state.stateBackEndHost+'/service-creation-test-generation/generateTests', {
 				method: 'post',
 				headers: {
 					'Accept': '*/*',
