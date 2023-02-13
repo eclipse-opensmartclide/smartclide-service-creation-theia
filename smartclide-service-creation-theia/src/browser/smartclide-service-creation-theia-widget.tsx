@@ -26,20 +26,26 @@ export class SmartclideServiceCreationTheiaWidget extends ReactWidget {
 		stateGitURL: '',
 		stateGitUsername: '',
 		stateGitToken: '',
-		stateKeycloakToken: ''
+		stateKeycloakToken: '',
+		stateServiceID: ''
 	};
 
 	//Handle TOKEN_INFO message from parent
 	handleTokenInfo = ({data}:any) => {
     switch (data.type) {
-      case messageTypes.TOKEN_INFO:
+      case messageTypes.KEYCLOAK_TOKEN:
         console.log("service-creation: RECEIVED", JSON.stringify(data, undefined, 4));
         SmartclideServiceCreationTheiaWidget.state.stateKeycloakToken = data.content;
         break;
-      case messageTypes.TOKEN_REVOKE:
+      case messageTypes.COMM_END:
         console.log("service-creation: RECEIVED", JSON.stringify(data, undefined, 4));
         window.removeEventListener("message", this.handleTokenInfo);
         break;
+	  case messageTypes.COMM_START_REPLY:
+		console.log("service-creation: RECEIVED", JSON.stringify(data, undefined, 4));
+		SmartclideServiceCreationTheiaWidget.state.stateKeycloakToken = data.content.token;
+		SmartclideServiceCreationTheiaWidget.state.stateServiceID = data.content.serviceID;
+		break;
       default:
         break;
     }
@@ -62,7 +68,7 @@ export class SmartclideServiceCreationTheiaWidget extends ReactWidget {
 		window.addEventListener("message", this.handleTokenInfo);
 
 		//Send a message to inform SmartCLIDE IDE
-		let message = buildMessage(messageTypes.COMPONENT_HELLO);
+		let message = buildMessage(messageTypes.COMM_START);
 		window.parent.postMessage(message, "*");
     }
 
