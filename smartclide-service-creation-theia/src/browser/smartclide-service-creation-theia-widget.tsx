@@ -15,6 +15,7 @@ import { ReactWidget } from '@theia/core/lib/browser/widgets/react-widget';
 import { MessageService } from '@theia/core';
 import { messageTypes, buildMessage } from '@unparallel/smartclide-frontend-comm';
 import { Message } from '@theia/core/lib/browser';
+import { BackendService } from '../common/protocol';
 
 @injectable()
 export class SmartclideServiceCreationTheiaWidget extends ReactWidget {
@@ -53,6 +54,9 @@ export class SmartclideServiceCreationTheiaWidget extends ReactWidget {
 
     @inject(MessageService)
     protected readonly messageService!: MessageService;
+	
+	@inject(BackendService)
+	private readonly backendService: BackendService;
 
     @postConstruct()
     protected async init(): Promise < void> {
@@ -70,6 +74,9 @@ export class SmartclideServiceCreationTheiaWidget extends ReactWidget {
 		//Send a message to inform SmartCLIDE IDE
 		let message = buildMessage(messageTypes.COMM_START);
 		window.parent.postMessage(message, "*");
+
+		SmartclideServiceCreationTheiaWidget.state.stateBackEndHost = await this.backendService.getEnvironmentVariable();
+		console.log("BackEnd Host: "+SmartclideServiceCreationTheiaWidget.state.stateBackEndHost);
     }
 
 	//After Detach Remove Listener
