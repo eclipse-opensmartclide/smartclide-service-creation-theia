@@ -32,23 +32,23 @@ export class SmartclideServiceCreationTheiaWidget extends ReactWidget {
 
 	//Handle TOKEN_INFO message from parent
 	handleTokenInfo = ({data}:any) => {
-    switch (data.type) {
-      case messageTypes.KEYCLOAK_TOKEN:
-        console.log("service-creation: RECEIVED", JSON.stringify(data, undefined, 4));
-        SmartclideServiceCreationTheiaWidget.state.stateKeycloakToken = data.content;
-        break;
-      case messageTypes.COMM_END:
-        console.log("service-creation: RECEIVED", JSON.stringify(data, undefined, 4));
-        window.removeEventListener("message", this.handleTokenInfo);
-        break;
-	  case messageTypes.COMM_START_REPLY:
-		console.log("service-creation: RECEIVED", JSON.stringify(data, undefined, 4));
-		SmartclideServiceCreationTheiaWidget.state.stateKeycloakToken = data.content.token;
-		SmartclideServiceCreationTheiaWidget.state.stateServiceID = data.content.serviceID;
-		break;
-      default:
-        break;
-    }
+		switch (data.type) {
+			case messageTypes.KEYCLOAK_TOKEN:
+				console.log("service-creation: RECEIVED", JSON.stringify(data, undefined, 4));
+				SmartclideServiceCreationTheiaWidget.state.stateKeycloakToken = data.content.token;
+				break;
+			case messageTypes.COMM_END:
+				console.log("service-creation: RECEIVED", JSON.stringify(data, undefined, 4));
+				window.removeEventListener("message", this.handleTokenInfo);
+				break;
+			case messageTypes.COMM_START_REPLY:
+				console.log("service-creation: RECEIVED", JSON.stringify(data, undefined, 4));
+				SmartclideServiceCreationTheiaWidget.state.stateKeycloakToken = data.content.token;
+				SmartclideServiceCreationTheiaWidget.state.stateServiceID = data.content.serviceID;
+				break;
+			default:
+				break;
+		}
 	}
 
     @inject(MessageService)
