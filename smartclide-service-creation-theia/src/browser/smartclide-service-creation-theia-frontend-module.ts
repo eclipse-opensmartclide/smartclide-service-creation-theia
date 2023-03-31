@@ -10,8 +10,10 @@
 
 import { ContainerModule } from 'inversify';
 import { SmartclideServiceCreationTheiaWidget } from './smartclide-service-creation-theia-widget';
+import { WebSocketConnectionProvider } from '@theia/core/lib/browser';
 import { SmartclideServiceCreationTheiaContribution } from './smartclide-service-creation-theia-contribution';
 import { bindViewContribution, FrontendApplicationContribution, WidgetFactory } from '@theia/core/lib/browser';
+import { BackendService, BACKEND_PATH } from '../common/protocol';
 
 import '../../src/browser/style/index.css';
 
@@ -23,4 +25,10 @@ export default new ContainerModule(bind => {
         id: SmartclideServiceCreationTheiaWidget.ID,
         createWidget: () => ctx.container.get<SmartclideServiceCreationTheiaWidget>(SmartclideServiceCreationTheiaWidget)
     })).inSingletonScope();
+
+    bind(BackendService).toDynamicValue(ctx => {
+        const connection = ctx.container.get(WebSocketConnectionProvider);
+        return connection.createProxy<BackendService>(BACKEND_PATH);
+    }).inSingletonScope();
+
 });
