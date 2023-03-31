@@ -22,7 +22,7 @@ import { BackendService } from '../common/protocol';
 export class SmartclideServiceCreationTheiaWidget extends ReactWidget {
 
     static readonly ID = 'smartclide-service-creation-theia:widget';
-    static readonly LABEL = 'Smartclide Service Creation Testing';
+    static readonly LABEL = 'Smartclide Service Unit Testing';
 	static state = {
 		stateBackEndHost: 'https://api.dev.smartclide.eu',
 		stateGitURL: '',
